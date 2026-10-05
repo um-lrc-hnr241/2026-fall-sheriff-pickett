@@ -1,10 +1,11 @@
 :root {
-  --text: #1f2933;
-  --muted: #52606d;
-  --background: #fdfcf9;
-  --accent: #1d5fa8;
-  --border: #d9d4c7;
-  --max-width: 46rem;
+  --text: #172033;
+  --muted: #414b5d;
+  --background: #f7f5fb;
+  --accent: #4c2b78;
+  --navy: #162444;
+  --border: #c9c5d4;
+  --max-width: 66rem;
 }
 
 *,
@@ -15,8 +16,8 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.125rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
   line-height: 1.6;
   color: var(--text);
   background: var(--background);
@@ -37,6 +38,8 @@ main,
   justify-content: space-between;
   gap: 1rem;
   border-bottom: 1px solid var(--border);
+  background: var(--navy);
+  color: #fff;
 }
 
 .site-title {
@@ -58,18 +61,105 @@ nav ul {
   list-style: none;
 }
 
+nav a {
+  color: #fff;
+  font-weight: 700;
+}
+
 a {
   color: var(--accent);
 }
 
 a:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 2px;
+  outline: 3px solid #a78ad1;
+  outline-offset: 3px;
+}
+
+.site-header a:focus-visible {
+  outline-color: #fff;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   line-height: 1.2;
+  color: var(--navy);
+}
+
+h2 {
+  color: var(--navy);
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+.hero,
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+
+.hero img,
+.feature-section img {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.content-section {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-left: 0.3rem solid var(--accent);
+  background: #eeebf5;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border-radius: 0.25rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background: var(--navy);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.team-card {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: #fff;
+}
+
+.team-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+.team-card h2 {
+  margin-bottom: 0.4rem;
+  font-size: 1.4rem;
 }
 
 img,
